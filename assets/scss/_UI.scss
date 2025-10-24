@@ -1,0 +1,106 @@
+.vr-container {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    @include media($size-2xl) {
+        max-width: 1000px;
+        width: calc(100% - 80px);
+    }
+
+    @include media($size-md) {
+        width: calc(100% - 40px);
+    }
+
+    @include media($size-sm) {
+        width: calc(100% - 20px);
+    }
+}
+
+.vr-btn {
+    &__secondary {
+        border-radius: 12px;
+        padding: 0 24px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: #fe6a80;
+        font-size: 14px;
+        color: $color-white;
+        flex-shrink: 0;
+        @include addTransition();
+
+        &:hover {
+            background: #ffa2b0;
+        }
+
+        &:active {
+            background: #e91a39;
+        }
+
+        &.disabled {
+            background: $color-light-grey;
+            color: $color-grey;
+            pointer-events: none;
+            user-select: none;
+        }
+    }
+
+    &__main {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 15px;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: center;
+        color: $color-white;
+        border-radius: 12px;
+        background: $color-fiolet;
+        @include addTransition();
+
+        &:hover {
+            background: #8169fe;
+        }
+
+        &:active {
+            background: #1b00a2;
+        }
+
+        &.disabled {
+            background: $color-light-grey;
+            color: $color-grey;
+            pointer-events: none;
+            user-select: none;
+
+            img {
+                filter: invert(0.28)
+            }
+        }
+    }
+}
+
+.vr-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: $color-black;
+    border-radius: 16px;
+    padding: 9px 15px;
+    display: inline-block;
+    background: $color-divider;
+
+    @include media($size-md) {
+        font-size: 26px;
+    }
+
+    @include media($size-sm) {
+        padding: 9px 10px;
+        font-size: 20px;
+        border-radius: 12px;
+    }
+}

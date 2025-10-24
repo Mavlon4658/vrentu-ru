@@ -1,0 +1,50 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@font-face {
+    font-family: "Cofo sans";
+    src: url('../fonts/cofo-sans.ttf');
+    font-weight: 400;
+}
+
+$font-inter: "Inter", sans-serif;
+$font-cofo-sans: "Cofo sans", sans-serif;
+// Fonts end
+
+// Colors
+$color-black: #313131;
+$color-dark-grey: #7e7e7e;
+$color-grey: #a9a9bd;
+$color-light-grey: #f4f4f4;
+$color-divider: #e5e7ef;
+$color-white: #fff;
+$color-pink: #ff6b84;
+$color-fiolet: #4428d2;
+$color-red: #de191c;
+$color-green: #2ab860;
+$color-blue: #6b8eff;
+// Colors end
+
+// Media size
+$size-2xl: 1440;
+$size-xl: 1100;
+$size-md: 760;
+$size-sm: 470;
+// Media size end
+
+@mixin media($value) {
+    @if ($value < 0) {
+        @media screen and (min-width: calc($value * (-1)) + 'px') {
+            @content;
+        }
+
+    } @else {
+        @media screen and (max-width: $value + 'px') {
+            @content;
+        }
+    }
+}
+
+@mixin addTransition () {
+    transition: .3s ease-in-out all;
+}
