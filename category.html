@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Syle CSS -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    
+    <div class="vr-wrapper">
+
+        <!-- Header -->
+        <header class="vr-header bordered">
+            <div class="vr-header__top">
+                <div class="vr-container vr-header__top-container">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/images/header-top-left-icon-1.svg" alt="">
+                                <span>Москва</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">
+                                <img src="./assets/images/header-top-left-icon-2.svg" alt="">
+                                <span>О компании</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/images/header-top-left-icon-3.svg" alt="">
+                                <span>Контакты</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/images/header-top-left-icon-4.svg" alt="">
+                                <span>Поддержка</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="vr-header__top-right">
+                        <p>Стать арендодателем</p>
+                        <a href="#">
+                            <img src="./assets/images/header-top-right-icon-1.svg" alt="">
+                            <span>Вход</span>
+                        </a>
+                        <a href="#">
+                            <img src="./assets/images/header-top-right-icon-2.svg" alt="">
+                            <span>Регистрация</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="vr-header__bottom">
+                <div class="vr-container vr-header__bottom-container">
+                    <a href="/" class="logotip">
+                        <img src="./assets/images/logo.svg" alt="">
+                    </a>
+                    <div class="center-block">
+                        <button class="category-btn">
+                            <img src="./assets/images/bars.svg" alt="">
+                            <img src="./assets/images/times.svg" alt="">
+                        </button>
+                        <div class="search-form">
+                            <div class="search-form__inp">
+                                <img src="./assets/images/search-icon.svg" alt="">
+                                <input type="text" placeholder="Искать товары">
+                            </div>
+                            <div class="search-form__inp">
+                                <img src="./assets/images/calendar-icon.svg" alt="">
+                                <input type="text" placeholder="Дата аренды">
+                            </div>
+                            <button class="vr-btn__secondary">
+                                <span>Поиск</span>
+                                <img src="./assets/images/search-icon-whilte.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="right-link">
+                        <li>
+                            <a href="#">
+                                <img src="./assets/images/heart.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="./assets/images/user.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- Header end -->
+
+        <!-- Bottom navs -->
+        <section class="vr-navs">
+            <ul class="vr-container vr-navs__container">
+                <li>
+                    <a href="#" class="category-btn">
+                        <img src="./assets/images/bars-grey.svg" alt="">
+                        <span>Каталог</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./assets/images/profile-icon.svg" alt="">
+                        <span>Профиль</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./assets/images/heart-grey.svg" alt="">
+                        <span>Избранное</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- Bottom navs end -->
+
+        <!-- Category modal -->
+        <section class="category-modal">
+            <div class="category-modal__bg"></div>
+            <div class="vr-container category-modal__container">
+                <div class="category-modal__content">
+                    <div class="category-modal__left">
+                        <button class="active">
+                            <span>Бытовая техника</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Детские товары</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Инструменты</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Коммерческое оборудование</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Недвижимость</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Одежда, обувь, аксессуары</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>События и развлечения</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Спец. оборудование</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Спецтехника</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Спорт и активный отдых</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Товары для авто</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Транспорт</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Хобби и досуг</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                        <button>
+                            <span>Электроника и гаджеты</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="category-modal__right">
+                        <div class="category-modal__right-item active">
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты</h3>
+                            </div>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 2</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 3</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 4</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 5</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 6</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 7</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 8</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструмент 9</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 10</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 11</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 12</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 13</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                        <div class="category-modal__right-item">
+                            <h3>Инструменты 14</h3>
+                            <ul>
+                                <li><a href="#">Лобзики, шлифмашины</a></li>
+                                <li><a href="#">Сварочные аппараты</a></li>
+                                <li><a href="#">Ручные инструменты и наборы</a></li>
+                                <li><a href="#">Компрессоры</a></li>
+                                <li><a href="#">Дрели, шуруповерты, болгарки</a></li>
+                                <li><a href="#">Измерительный инструмент</a></li>
+                                <li><a href="#">Бетономешалки</a></li>
+                                <li><a href="#">Буры</a></li>
+                                <li><a href="#">Перфораторы, резаки</a></li>
+                                <li><a href="#">Строительные пылесосы</a></li>
+                                <li><a href="#">Инструменты для электромонтажа</a></li>
+                                <li><a href="#">Грузоподъемное оборудование</a></li>
+                                <li><a href="#">Виброплиты и трамбовки</a></li>
+                                <li><a href="#">Тепловое оборудование</a></li>
+                                <li><a href="#">Затирочные машины</a></li>
+                                <li><a href="#">Для работы на высоте</a></li>
+                                <li><a href="#">Резчики</a></li>
+                                <li><a href="#">Пилы</a></li>
+                                <li><a href="#">Генераторы</a></li>
+                                <li><a href="#">Газонокосилки и косы</a></li>
+                                <li><a href="#">Станки для гибки</a></li>
+                                <li><a href="#">Моечное оборудование</a></li>
+                                <li><a href="#">Помпы и шланги</a></li>
+                                <li><a href="#">Пистолеты различного назначения</a></li>
+                                <li><a href="#">Шлифовка и фрезеровка</a></li>
+                                <li><a href="#">Инструменты для труб</a></li>
+                                <li><a href="#">Резка камня и плитки</a></li>
+                                <li><a href="#">Алмазный инструмент</a></li>
+                                <li><a href="#">Тележки</a></li>
+                                <li><a href="#">Для работ по дереву</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Category modal end -->
+
+        <!-- Search modal -->
+        <section class="search-modal">
+            <div class="search-modal__bg"></div>
+            <div class="vr-container search-modal__container">
+                <ul class="search-modal__content">
+                    <li><a href="#">Строительная угловая шлифмашина DeWALT DCG405NT</a></li>
+                    <li><a href="#">Строительный Ручной плиткорез Rubi Speed-62 N</a></li>
+                    <li><a href="#">Строительная пылесос Karcher WD 5 (уборка во время ремонта) 25л (увеличенная мощность + воздуходувку)</a></li>
+                    <li><a href="#">Строительная Угловая дрель Mak DA3011F</a></li>
+                    <li><a href="#">Строительная фен Bosch GHG 20-60</a></li>
+                    <li><a href="#">Строительная Эксцентриковая шлифмашина Mak BO5041K</a></li>
+                    <li><a href="#">Строительная Дисковая пила Bosch GKS 190</a></li>
+                    <li><a href="#">Строительная Сабельная пила Mak JR 3070 CT</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Search modal end -->
+
+        <div class="vr-filter__modal">
+            <div class="vr-filter__modal-bg"></div>
+            <div class="vr-container vr-filter__modal-content">
+                <div class="vr-filter__modal-head">
+                    <h3>Фильтры</h3>
+                    <button class="vr-filter__modal-close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="#7E7E7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M9.16992 14.8299L14.8299 9.16992" stroke="#7E7E7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14.8299 14.8299L9.16992 9.16992" stroke="#7E7E7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="vr-filter__modal-form">
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Подкатегория <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Производитель <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Способ питания <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Тип двигателя <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Рейтинг <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Стоимость аренды (в сутки)</label>
+                        <div class="vr-date">
+                            <div class="vr-date__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-date__inp">
+                            </div>
+                            <div class="vr-date__body form_range">
+                                <div class="form_range__val">
+                                    <div class="form_range__val_item">
+                                        <input class="val" type="number" value="0" min="0" max="3800" step="1">
+                                        <span>от</span>
+                                    </div>
+                                    <div class="form_range__val_item">
+                                        <input class="val" type="number" value="0" min="0" max="3800" step="1">
+                                        <span>до</span>
+                                    </div>
+                                </div>
+                                <div class="form_range__inp">
+                                    <div class="line"></div>
+                                    <input value="792" min="0" max="3800" step="1" type="range" />
+                                    <input value="3800" min="0" max="3800" step="1" type="range" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Даты аренды <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-filter__modal-form__control">
+                        <label for="">Тип двигателя <span></span></label>
+                        <div class="vr-select">
+                            <div class="vr-select__btn">
+                                <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                            </div>
+                            <div class="vr-select__list">
+                                <ul>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                    <li>Строительные фены</li>
+                                    <li>Шуруповёрты</li>
+                                    <li>Лобзики</li>
+                                    <li>Шлифовальные машины</li>
+                                    <li>Пилы и плиткорезы</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="vr-filter__modal-btns">
+                    <button class="vr-btn__grey">Сбросить</button>
+                    <button class="vr-btn__main">Применить</button>
+                </div>
+            </div>
+        </div>
+    
+        <main>
+
+            <!-- Category -->
+            <section class="vr-category">
+                <div class="vr-container vr-category__container">
+                    <ul class="vr-breadcrumb">
+                        <li>
+                            <a href="/" class="vr-btn__main">
+                                <img src="./assets/images/home-icon.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.21967C0.512563 -0.0732231 0.987436 -0.0732232 1.28033 0.21967L5.28033 4.21967C5.57322 4.51256 5.57322 4.98744 5.28033 5.28033L1.28033 9.28033C0.987437 9.57322 0.512564 9.57322 0.21967 9.28033C-0.073223 8.98744 -0.0732231 8.51256 0.21967 8.21967L3.68934 4.75L0.21967 1.28033C-0.0732237 0.987437 -0.0732237 0.512563 0.21967 0.21967Z" fill="#7E7E7E" />
+                            </svg>
+                        </li>
+                        <li>
+                            <a href="#">Каталог</a>
+                        </li>
+                        <li>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.21967C0.512563 -0.0732231 0.987436 -0.0732232 1.28033 0.21967L5.28033 4.21967C5.57322 4.51256 5.57322 4.98744 5.28033 5.28033L1.28033 9.28033C0.987437 9.57322 0.512564 9.57322 0.21967 9.28033C-0.073223 8.98744 -0.0732231 8.51256 0.21967 8.21967L3.68934 4.75L0.21967 1.28033C-0.0732237 0.987437 -0.0732237 0.512563 0.21967 0.21967Z" fill="#7E7E7E" />
+                            </svg>
+                        </li>
+                        <span>Инструменты</span>
+                    </ul>
+                    <div class="vr-category__head">
+                        <div class="vr-category__head-left">
+                            <div class="vr-title">Инструменты</div>
+                            <div class="vr-count">56</div>
+                        </div>
+                        <div class="vr-category__head-right">
+                            <a href="#" class="vr-tag">
+                                <img src="./assets/images/map-icon.svg" alt="">
+                                <span>Показать на карте</span>
+                            </a>
+                            <div class="vr-sort">
+                                <div class="vr-sort__btn">
+                                    <span>
+                                        <span>Сортировка:</span> <b>По популярности</b>
+                                    </span>
+                                    <input type="text" value="По популярности">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 9.96967C16.8232 10.2626 16.8232 10.7374 16.5303 11.0303L12.5303 15.0303C12.2374 15.3232 11.7626 15.3232 11.4697 15.0303L7.46967 11.0303C7.17678 10.7374 7.17678 10.2626 7.46967 9.96967C7.76256 9.67678 8.23744 9.67678 8.53033 9.96967L12 13.4393L15.4697 9.96967C15.7626 9.67678 16.2374 9.67678 16.5303 9.96967Z" fill="#A9A9BD" />
+                                    </svg>
+                                </div>
+                                <div class="vr-select__list">
+                                    <ul>
+                                        <li class="selected">По популярности</li>
+                                        <li>Select 1</li>
+                                        <li>Select 2</li>
+                                        <li>Select 3</li>
+                                        <li>Select 4</li>
+                                        <li>Select 5</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-category__swp">
+                        <button class="swp-btn swp-btn__prev">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.75 0.75L0.75 4.75L4.75 8.75" stroke="#313131" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#">Лобзики, шлифмашины</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">Ручные инструменты и наборы</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">Дрели, шуруповерты, болгарки</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">Бетономешалки</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">Перфораторы, резаки</a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">Инструменты для электромонтажа</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="swp-btn swp-btn__next">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.75 8.75L4.75 4.75L0.75 0.75" stroke="#313131" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="vr-filter__btn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.3999 2.09961H18.5999C19.6999 2.09961 20.5999 2.99961 20.5999 4.09961V6.29961C20.5999 7.09961 20.0999 8.09961 19.5999 8.59961L15.2999 12.3996C14.6999 12.8996 14.2999 13.8996 14.2999 14.6996V18.9996C14.2999 19.5996 13.8999 20.3996 13.3999 20.6996L11.9999 21.5996C10.6999 22.3996 8.8999 21.4996 8.8999 19.8996V14.5996C8.8999 13.8996 8.4999 12.9996 8.0999 12.4996L4.2999 8.49961C3.7999 7.99961 3.3999 7.09961 3.3999 6.49961V4.19961C3.3999 2.99961 4.2999 2.09961 5.3999 2.09961Z" stroke="#7E7E7E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span>Показать фильтр</span>
+                    </div>
+                    <div class="vr-category__filter">
+                        <div class="vr-category__filter-form">
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Подкатегория</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Производитель</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Способ питания</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Тип двигателя</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Рейтинг</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Стоимость аренды</label>
+                                <div class="vr-date">
+                                    <div class="vr-date__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-date__inp">
+                                    </div>
+                                    <div class="vr-date__body form_range">
+                                        <div class="form_range__val">
+                                            <div class="form_range__val_item">
+                                                <input class="val" type="number" value="0" min="0" max="3800" step="1">
+                                                <span>от</span>
+                                            </div>
+                                            <div class="form_range__val_item">
+                                                <input class="val" type="number" value="0" min="0" max="3800" step="1">
+                                                <span>до</span>
+                                            </div>
+                                        </div>
+                                        <div class="form_range__inp">
+                                            <div class="line"></div>
+                                            <input value="792" min="0" max="3800" step="1" type="range" />
+                                            <input value="3800" min="0" max="3800" step="1" type="range" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Даты аренды</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-category__filter-form__control">
+                                <label for="">Тип двигателя</label>
+                                <div class="vr-select">
+                                    <div class="vr-select__btn">
+                                        <input type="text" placeholder="Все варианты" class="vr-select__inp">
+                                    </div>
+                                    <div class="vr-select__list">
+                                        <ul>
+                                            <li>Строительные фены</li>
+                                            <li class="selected">Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                            <li>Строительные фены</li>
+                                            <li>Шуруповёрты</li>
+                                            <li>Лобзики</li>
+                                            <li>Шлифовальные машины</li>
+                                            <li>Пилы и плиткорезы</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-category__filter-btns">
+                            <button class="vr-btn__grey">Сбросить</button>
+                            <button class="vr-btn__main">Применить</button>
+                        </div>
+                    </div>
+                    <div class="vr-category__result">
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite active">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <p class="vr-product__card-tag">популярный</p>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite active">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <p class="vr-product__card-tag">популярный</p>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite active">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <p class="vr-product__card-tag">популярный</p>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="vr-product__card">
+                            <div class="vr-product__card-head">
+                                <button class="vr-product__card-favorite">
+                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
+                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
+                                    </svg>
+                                </button>
+                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                            </div>
+                            <div class="vr-product__card-body">
+                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <div class="vr-product__card-info">
+                                    <div class="vr-product__card-seller">
+                                        <div class="vr-product__card-avatar"></div>
+                                        <div>
+                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                        </div>
+                                    </div>
+                                    <div class="vr-product__card-rating">
+                                        <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
+                                        </svg>
+                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                    </div>
+                                </div>
+                                <div class="vr-product__card-bottom">
+                                    <div>
+                                        <div class="vr-product__card-price">488 ₽</div>
+                                        <div class="vr-product__card-period">в сутки</div>
+                                    </div>
+                                    <button class="vr-btn__main vr-product__card-add" aria-label="Добавить">
+                                        <img src="./assets/images/add-icon.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-pagination">
+                        <a href="#" class="vr-pagination__btn">
+                            <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.15 9.575L0.75 5.1625L5.15 0.75" stroke="#313131" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#" class="active">1</a>
+                            </li>
+                            <li>
+                                <a href="#">2</a>
+                            </li>
+                            <li>
+                                <a href="#">3</a>
+                            </li>
+                            <li>
+                                <a href="#">4</a>
+                            </li>
+                            <li>
+                                <a href="#">5</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="vr-pagination__btn">
+                            <svg width="6" height="11" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.75 9.575L5.15 5.1625L0.75 0.75" stroke="#313131" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- Category end -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="vr-footer">
+            <div class="vr-container vr-footer__container">
+                <div class="vr-footer__head">
+                    <a href="/" class="vr-footer__logo">Vrentu.ru</a>
+                    <div class="vr-footer__right">
+                        <div class="vr-footer__right-item">
+                            <a href="#">О компании</a>
+                            <a href="#">Контакты</a>
+                            <a href="#">Поддержка</a>
+                            <p>Стать арендодателем</p>
+                        </div>
+                        <div class="vr-footer__right-item">
+                            <a href="#">Пользовательское соглашение</a>
+                            <a href="#">Политика конфиденциальности</a>
+                            <a href="#">Договор оферты</a>
+                            <a href="#">Правила оплаты и безопасной сделки</a>
+                        </div>
+                        <div class="vr-footer__right-item">
+                            <a href="#" class="link-btn">
+                                <img src="./assets/images/google-play-icon.svg" alt="">
+                                <span>
+                                    <span>Скачать из</span>
+                                    <svg width="84" height="17" viewBox="0 0 84 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.9631 4.65255C26.1299 4.6545 25.316 4.90348 24.6244 5.36798C23.9327 5.83248 23.3944 6.49165 23.0773 7.26213C22.7603 8.03261 22.6789 8.8798 22.8433 9.69656C23.0078 10.5133 23.4108 11.263 24.0013 11.8507C24.5918 12.4385 25.3433 12.8379 26.1608 12.9985C26.9784 13.1591 27.8252 13.0737 28.5941 12.7531C29.3631 12.4325 30.0198 11.891 30.481 11.1972C30.9423 10.5033 31.1874 9.68832 31.1855 8.85516C31.1935 8.29937 31.0897 7.74763 30.8801 7.2328C30.6705 6.71797 30.3594 6.25058 29.9655 5.85846C29.5715 5.46633 29.1026 5.15749 28.5868 4.95031C28.071 4.74314 27.5188 4.64187 26.9631 4.65255ZM26.9631 11.4064C26.4524 11.4421 25.9428 11.3234 25.5005 11.0656C25.0582 10.8079 24.7037 10.423 24.483 9.96113C24.2624 9.49923 24.1858 8.98162 24.2632 8.47559C24.3406 7.96957 24.5684 7.49854 24.9171 7.12372C25.2658 6.74891 25.7191 6.48765 26.2182 6.37391C26.7173 6.26018 27.2391 6.29922 27.7158 6.48596C28.1924 6.6727 28.6018 6.99851 28.8908 7.42104C29.1798 7.84356 29.3351 8.34326 29.3363 8.85516C29.3522 9.17952 29.303 9.50378 29.1917 9.80883C29.0803 10.1139 28.9089 10.3935 28.6878 10.6313C28.4666 10.8691 28.2 11.0602 27.9038 11.1933C27.6076 11.3264 27.2877 11.3989 26.9631 11.4064ZM17.747 4.65255C16.9138 4.6545 16.0999 4.90348 15.4083 5.36798C14.7166 5.83248 14.1783 6.49165 13.8612 7.26213C13.5442 8.03261 13.4628 8.8798 13.6272 9.69656C13.7917 10.5133 14.1947 11.263 14.7852 11.8507C15.3757 12.4385 16.1272 12.8379 16.9447 12.9985C17.7623 13.1591 18.6091 13.0737 19.378 12.7531C20.147 12.4325 20.8037 11.891 21.2649 11.1972C21.7262 10.5033 21.9713 9.68832 21.9694 8.85516C21.9774 8.29937 21.8736 7.74763 21.664 7.2328C21.4544 6.71797 21.1433 6.25058 20.7494 5.85846C20.3554 5.46633 19.8866 5.15749 19.3707 4.95031C18.8549 4.74314 18.3027 4.64187 17.747 4.65255ZM17.747 11.4064C17.2363 11.4421 16.7267 11.3234 16.2844 11.0656C15.8421 10.8079 15.4876 10.423 15.2669 9.96113C15.0463 9.49923 14.9697 8.98162 15.0471 8.47559C15.1245 7.96957 15.3523 7.49854 15.701 7.12372C16.0497 6.74891 16.503 6.48765 17.0021 6.37391C17.5012 6.26018 18.023 6.29922 18.4997 6.48596C18.9763 6.6727 19.3857 6.99851 19.6747 7.42104C19.9637 7.84356 20.119 8.34326 20.1202 8.85516C20.1361 9.17952 20.087 9.50378 19.9756 9.80883C19.8642 10.1139 19.6928 10.3935 19.4717 10.6313C19.2505 10.8691 18.9839 11.0602 18.6877 11.1933C18.3915 11.3264 18.0716 11.3989 17.747 11.4064ZM6.79049 5.94794V7.72787H11.0623C10.9953 8.56623 10.6469 9.3573 10.0735 9.97257C9.64497 10.4092 9.12957 10.7509 8.56065 10.9758C7.99172 11.2006 7.38193 11.3035 6.77072 11.2779C5.51187 11.2779 4.30458 10.7778 3.41444 9.88764C2.5243 8.9975 2.02423 7.79021 2.02423 6.53136C2.02423 5.27252 2.5243 4.06523 3.41444 3.17509C4.30458 2.28495 5.51187 1.78488 6.77072 1.78488C7.97756 1.76693 9.14287 2.22524 10.0141 3.06049L11.27 1.80466C10.6806 1.22173 9.98084 0.762297 9.21165 0.453263C8.44246 0.144229 7.61934 -0.00818693 6.79049 0.00494449C5.9114 -0.0292677 5.03445 0.114339 4.21218 0.427156C3.38992 0.739973 2.63926 1.21556 2.0052 1.82543C1.37114 2.4353 0.866715 3.16689 0.522159 3.97637C0.177602 4.78584 0 5.65655 0 6.53631C0 7.41606 0.177602 8.28677 0.522159 9.09625C0.866715 9.90573 1.37114 10.6373 2.0052 11.2472C2.63926 11.8571 3.38992 12.3326 4.21218 12.6455C5.03445 12.9583 5.9114 13.1019 6.79049 13.0677C7.63638 13.1015 8.47984 12.9559 9.26549 12.6406C10.0511 12.3254 10.7612 11.8474 11.3491 11.2383C12.3875 10.0976 12.9408 8.59725 12.8917 7.05545C12.8952 6.68436 12.8655 6.31371 12.8027 5.94794H6.79049ZM51.5953 7.33233C51.3375 6.57362 50.8552 5.91114 50.2124 5.4326C49.5697 4.95406 48.7967 4.68204 47.9959 4.65255C47.455 4.65149 46.9196 4.76138 46.4229 4.97544C45.9261 5.1895 45.4786 5.50316 45.1079 5.89705C44.7371 6.29094 44.4512 6.75667 44.2676 7.26547C44.084 7.77427 44.0067 8.31532 44.0405 8.85516C44.0321 9.75784 44.3159 10.639 44.8495 11.3671C45.3832 12.0952 46.138 12.6311 47.0014 12.8948C47.8647 13.1584 48.7902 13.1357 49.6396 12.8301C50.489 12.5244 51.2167 11.9521 51.714 11.1987L50.2802 10.2099C50.0664 10.5662 49.7633 10.8603 49.4007 11.0633C49.0382 11.2662 48.6289 11.3709 48.2135 11.3668C47.7849 11.3845 47.361 11.2722 46.9974 11.0445C46.6338 10.8168 46.3477 10.4845 46.1764 10.0912L51.803 7.76743L51.5953 7.33233ZM45.86 8.7365C45.84 8.42934 45.8814 8.12127 45.9819 7.83033C46.0824 7.53939 46.24 7.27143 46.4453 7.04213C46.6507 6.81283 46.8997 6.62681 47.1778 6.49496C47.456 6.36311 47.7576 6.28808 48.0651 6.27426C48.3838 6.25481 48.701 6.32983 48.9772 6.4899C49.2534 6.64997 49.4761 6.88798 49.6176 7.17412L45.86 8.7365ZM41.2915 12.8106H43.1407V0.449928H41.2915V12.8106ZM38.2656 5.59196H38.1964C37.9202 5.27736 37.5793 5.02614 37.197 4.85547C36.8147 4.6848 36.4 4.59872 35.9814 4.6031C34.9007 4.65551 33.8817 5.12168 33.1354 5.90501C32.3892 6.68834 31.9729 7.72876 31.9729 8.81067C31.9729 9.89257 32.3892 10.933 33.1354 11.7163C33.8817 12.4997 34.9007 12.9658 35.9814 13.0182C36.4006 13.0266 36.8165 12.9424 37.1994 12.7714C37.5823 12.6005 37.9228 12.3471 38.1964 12.0294H38.2656V12.6326C38.2656 14.2444 37.4053 15.1047 36.0209 15.1047C35.5585 15.0945 35.1095 14.9472 34.7309 14.6813C34.3524 14.4155 34.0614 14.0431 33.8949 13.6115L32.293 14.2741C32.5891 15.0179 33.1041 15.6544 33.7697 16.0993C34.4354 16.5443 35.2204 16.7767 36.0209 16.766C38.1865 16.766 39.9763 15.4904 39.9763 12.3854V4.89976H38.2656V5.59196ZM36.1396 11.4064C35.4917 11.366 34.8836 11.0802 34.4391 10.6071C33.9946 10.134 33.7471 9.50926 33.7471 8.86011C33.7471 8.21096 33.9946 7.58623 34.4391 7.11314C34.8836 6.64006 35.4917 6.35421 36.1396 6.31382C36.4563 6.32748 36.7669 6.40471 37.0532 6.54089C37.3394 6.67708 37.5953 6.86945 37.8056 7.10655C38.016 7.34366 38.1765 7.62065 38.2776 7.92105C38.3787 8.22146 38.4183 8.53912 38.3942 8.85516C38.4212 9.17228 38.3835 9.49157 38.2836 9.79374C38.1836 10.0959 38.0235 10.3746 37.8127 10.6131C37.6019 10.8516 37.345 11.0449 37.0574 11.1812C36.7699 11.3176 36.4576 11.3942 36.1396 11.4064ZM60.2577 0.449928H55.8276V12.8106H57.6768V8.12341H60.2577C60.7847 8.16127 61.3138 8.09016 61.8122 7.9145C62.3105 7.73884 62.7673 7.4624 63.154 7.10242C63.5408 6.74244 63.8493 6.30664 64.0602 5.82219C64.2711 5.33775 64.3799 4.81504 64.3799 4.28667C64.3799 3.7583 64.2711 3.2356 64.0602 2.75115C63.8493 2.2667 63.5408 1.8309 63.154 1.47092C62.7673 1.11094 62.3105 0.834508 61.8122 0.658846C61.3138 0.483185 60.7847 0.412067 60.2577 0.449928ZM60.2577 6.38304H57.6768V2.17053H60.2972C60.5751 2.17053 60.8503 2.22526 61.107 2.33161C61.3638 2.43796 61.5971 2.59383 61.7936 2.79033C61.9901 2.98683 62.1459 3.22012 62.2523 3.47686C62.3586 3.7336 62.4134 4.00877 62.4134 4.28667C62.4134 4.56457 62.3586 4.83974 62.2523 5.09649C62.1459 5.35323 61.9901 5.58651 61.7936 5.78301C61.5971 5.97951 61.3638 6.13538 61.107 6.24173C60.8503 6.34808 60.5751 6.40281 60.2972 6.40281L60.2577 6.38304ZM71.669 4.61299C70.9956 4.57147 70.3248 4.72824 69.7396 5.06392C69.1543 5.3996 68.6803 5.89947 68.3761 6.5017L70.0077 7.18401C70.1726 6.88676 70.42 6.64361 70.7201 6.48393C71.0202 6.32424 71.36 6.25486 71.6987 6.28415C71.9334 6.25674 72.1713 6.27634 72.3984 6.34182C72.6254 6.40731 72.8372 6.51736 73.0213 6.66556C73.2054 6.81376 73.3581 6.99713 73.4706 7.20499C73.5831 7.41285 73.653 7.64102 73.6764 7.8762V7.99486C73.0817 7.6823 72.4199 7.51939 71.7481 7.52022C69.988 7.52022 68.1883 8.50907 68.1883 10.3088C68.2057 10.6913 68.2998 11.0664 68.465 11.4119C68.6302 11.7573 68.8632 12.0661 69.15 12.3197C69.4369 12.5734 69.7718 12.7668 70.1349 12.8885C70.498 13.0102 70.8818 13.0577 71.2636 13.0281C71.7276 13.0538 72.1901 12.9556 72.6037 12.7436C73.0172 12.5316 73.367 12.2134 73.6171 11.8217H73.6764V12.8106H75.4563V8.05419C75.4563 5.88861 73.8148 4.63277 71.7086 4.63277L71.669 4.61299ZM71.4416 11.3866C70.8384 11.3866 69.9979 11.0801 69.9979 10.3384C69.9979 9.34959 71.046 9.01338 71.9756 9.01338C72.563 8.99889 73.1435 9.14232 73.6566 9.4287C73.5945 9.96571 73.3399 10.462 72.9399 10.8257C72.5399 11.1893 72.0216 11.3956 71.4811 11.4064L71.4416 11.3866ZM81.9432 4.89976L79.827 10.2593H79.7677L77.5725 4.89976H75.5948L78.8876 12.3953L77.0088 16.5583H78.9371L84 4.89976H81.9432ZM65.3305 12.8106H67.1697V0.449928H65.3305V12.8106Z" fill="black" />
+                                    </svg>
+                                </span>
+                            </a>
+                            <a href="#" class="link-btn">
+                                <img src="./assets/images/apple-icon.svg" alt="">
+                                <span>
+                                    <span>Скачать из</span>
+                                    <svg width="70" height="15" viewBox="0 0 70 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7.34412 8.61989H2.92981L1.86972 11.7413H0L4.18116 0.192871H6.12374L10.3049 11.7413H8.40329L7.34412 8.61989ZM3.38701 7.17952H6.88607L5.16114 2.11369H5.11283L3.38701 7.17952Z" fill="black" />
+                                        <path d="M19.3348 7.53166C19.3348 10.1481 17.9304 11.8292 15.8112 11.8292C15.2743 11.8572 14.7404 11.7338 14.2706 11.4733C13.8007 11.2128 13.414 10.8256 13.1546 10.3561H13.1145V14.5264H11.3813V3.32134H13.0589V4.72175H13.0908C13.3621 4.25447 13.7554 3.86928 14.2288 3.60717C14.7022 3.34506 15.2381 3.21584 15.7793 3.23324C17.9222 3.23325 19.3348 4.92246 19.3348 7.53166ZM17.5534 7.53166C17.5534 5.82702 16.67 4.70631 15.3221 4.70631C13.9979 4.70631 13.1072 5.85062 13.1072 7.53166C13.1072 9.22814 13.9979 10.3643 15.3221 10.3643C16.67 10.3643 17.5533 9.25175 17.5533 7.53166H17.5534Z" fill="black" />
+                                        <path d="M28.6284 7.53166C28.6284 10.1481 27.2236 11.8292 25.1044 11.8292C24.5675 11.8572 24.0336 11.7338 23.5638 11.4733C23.094 11.2128 22.7072 10.8256 22.4478 10.3561H22.4077V14.5264H20.6746V3.32134H22.3521V4.72175H22.384C22.6553 4.25447 23.0486 3.86928 23.522 3.60717C23.9955 3.34506 24.5313 3.21584 25.0725 3.23324C27.2154 3.23325 28.6284 4.92246 28.6284 7.53166ZM26.8466 7.53166C26.8466 5.82702 25.9632 4.70631 24.6153 4.70631C23.2911 4.70631 22.4004 5.85062 22.4004 7.53166C22.4004 9.22814 23.2911 10.3643 24.6153 10.3643C25.9632 10.3643 26.8466 9.25175 26.8466 7.53166Z" fill="black" />
+                                        <path d="M34.7693 8.52331C34.8977 9.66853 36.0133 10.4205 37.5379 10.4205C38.9987 10.4205 40.0497 9.66849 40.0497 8.63588C40.0497 7.73951 39.4158 7.20279 37.9149 6.83497L36.414 6.47442C34.2875 5.9622 33.3003 4.97047 33.3003 3.36117C33.3003 1.36863 35.0416 0 37.5133 0C39.9613 0 41.6389 1.36863 41.6954 3.36117H39.9458C39.8411 2.20869 38.8857 1.51303 37.4896 1.51303C36.0935 1.51303 35.1381 2.21688 35.1381 3.2413C35.1381 4.05775 35.7483 4.53818 37.241 4.90596L38.5169 5.21837C40.893 5.77872 41.8793 6.73051 41.8793 8.4197C41.8793 10.5803 40.1544 11.9334 37.4094 11.9334C34.8412 11.9334 33.1071 10.612 32.9951 8.52323L34.7693 8.52331Z" fill="black" />
+                                        <path d="M45.6216 1.32886V3.3214H47.2272V4.69003H45.6216V9.33173C45.6216 10.0528 45.9431 10.3889 46.6489 10.3889C46.8395 10.3855 47.0298 10.3722 47.219 10.3489V11.7093C46.9017 11.7684 46.5791 11.7952 46.2563 11.7892C44.5469 11.7892 43.8802 11.149 43.8802 9.51606V4.69003H42.6526V3.3214H43.8802V1.32886H45.6216Z" fill="black" />
+                                        <path d="M48.1562 7.53162C48.1562 4.88247 49.7209 3.21777 52.1607 3.21777C54.6088 3.21777 56.1661 4.88243 56.1661 7.53162C56.1661 10.1881 54.617 11.8455 52.1607 11.8455C49.7054 11.8455 48.1562 10.188 48.1562 7.53162ZM54.4002 7.53162C54.4002 5.71436 53.5651 4.6418 52.1607 4.6418C50.7564 4.6418 49.9212 5.72253 49.9212 7.53162C49.9212 9.35615 50.7564 10.4205 52.1607 10.4205C53.5651 10.4205 54.4002 9.35615 54.4002 7.53162H54.4002Z" fill="black" />
+                                        <path d="M57.5949 3.32126H59.2478V4.75435H59.2879C59.3998 4.30677 59.6627 3.91122 60.0326 3.63419C60.4024 3.35717 60.8566 3.21555 61.3189 3.23315C61.5186 3.23246 61.7178 3.25409 61.9126 3.29764V4.9142C61.6605 4.83736 61.3975 4.80209 61.1339 4.80976C60.8822 4.79957 60.6312 4.84384 60.3982 4.93952C60.1652 5.03521 59.9557 5.18003 59.7841 5.36407C59.6125 5.5481 59.4829 5.76698 59.4042 6.00568C59.3255 6.24437 59.2995 6.49723 59.328 6.7469V11.741H57.5948L57.5949 3.32126Z" fill="black" />
+                                        <path d="M69.9035 9.26807C69.6704 10.7965 68.1777 11.8455 66.2679 11.8455C63.8117 11.8455 62.2871 10.2044 62.2871 7.57158C62.2871 4.9306 63.8199 3.21777 66.1951 3.21777C68.5311 3.21777 70.0001 4.81798 70.0001 7.37088V7.96301H64.0366V8.06745C64.0091 8.37732 64.048 8.68948 64.1508 8.9832C64.2535 9.27693 64.4177 9.54549 64.6326 9.77105C64.8474 9.99662 65.1079 10.174 65.3968 10.2915C65.6856 10.4089 65.9962 10.4638 66.308 10.4523C66.7175 10.4906 67.1285 10.396 67.4799 10.1826C67.8312 9.96925 68.104 9.64849 68.2579 9.26806L69.9035 9.26807ZM64.0448 6.75513H68.266C68.2816 6.47651 68.2392 6.1977 68.1416 5.93618C68.044 5.67466 67.8932 5.43609 67.6988 5.23543C67.5043 5.03477 67.2703 4.87637 67.0116 4.77015C66.7528 4.66393 66.4748 4.61219 66.1951 4.61819C65.9128 4.61651 65.633 4.67058 65.3719 4.77729C65.1107 4.884 64.8733 5.04122 64.6734 5.2399C64.4735 5.43857 64.315 5.67476 64.2072 5.93483C64.0993 6.1949 64.0441 6.4737 64.0448 6.75514V6.75513Z" fill="black" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="vr-footer__bottom">
+                    <p>© 2025 Vrentu.ru. Все права защищены</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+    </div>
+
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- iMask JS -->
+    <script src="./assets/js/iMask.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

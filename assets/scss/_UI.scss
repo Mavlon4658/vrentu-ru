@@ -1,6 +1,7 @@
 .vr-container {
     max-width: 1280px;
     margin: 0 auto;
+    width: calc(100% - 80px);
 
     @include media($size-2xl) {
         max-width: 1000px;
@@ -81,6 +82,93 @@
             }
         }
     }
+
+    &__back {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $color-light-grey;
+        border: 1px solid transparent;
+        @include addTransition();
+
+        svg path {
+            @include addTransition();
+        }
+
+        &:hover {
+            border-color: $color-fiolet;
+        }
+
+        &:active,
+        &.active {
+            background: $color-fiolet;
+
+            svg path {
+                fill: $color-white;
+            }
+        }
+    }
+
+    &__grey {
+        border-radius: 12px;
+        padding: 0 15px;
+        height: 40px;
+        background: $color-light-grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: center;
+        color: $color-black;
+        @include addTransition();
+
+        &:hover {
+            background: $color-grey;
+        }
+
+        &:active,
+        &.active {
+            color: $color-white;
+        }
+
+        &.disabled {
+            pointer-events: none;
+            background: $color-light-grey;
+            color: $color-grey;
+        }
+    }
+
+    &__md-grey {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+        height: 40px;
+        background: $color-grey;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 120%;
+        color: $color-white;
+        @include addTransition();
+
+        &:hover {
+            background: #aaaadb;
+        }
+
+        &:active, &.active {
+            background: #7b7ba4;
+        }
+
+        &.disabled {
+            background: $color-light-grey;
+            color: $color-grey;
+            pointer-events: none;
+        }
+    }
 }
 
 .vr-title {
@@ -100,6 +188,621 @@
 
     @include media($size-sm) {
         padding: 9px 10px;
+        font-size: 20px;
+        border-radius: 12px;
+    }
+}
+
+.vr-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+
+    @include media($size-md) {
+        gap: 6px;
+    }
+
+    @include media($size-sm) {
+        margin-bottom: 10px;
+    }
+    
+    .vr-btn__main {
+        width: 30px;
+        height: 30px;
+        padding: 0;
+        border-radius: 8px;
+
+        @include media($size-md) {
+            width: 24px;
+            height: 24px;
+
+            img {
+                width: 16px;
+            }
+        }
+    }
+    
+    a, span {
+        font-size: 14px;
+        line-height: 140%;
+        color: $color-dark-grey;
+
+        @include media($size-md) {
+            font-size: 12px;
+        }
+    }
+    
+    span {
+        color: $color-black;
+    }
+
+    svg {
+        @include media($size-md) {
+            width: 5.5px;
+        }
+    }
+}
+
+.vr-tag {
+    border: 1px solid $color-divider;
+    border-radius: 12px;
+    padding: 0 16px;
+    height: 40px;
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 120%;
+    color: $color-black;
+    @include addTransition();
+
+    @include media($size-md) {
+        padding: 0 8px;
+    }
+
+    @include media($size-sm) {
+        font-size: 12px;
+    }
+
+    &:hover {
+        border-color: $color-fiolet;
+    }
+
+    &.active,
+    &:active {
+        background: rgba(68, 40, 210, 0.1);
+        border-color: $color-divider;
+    }
+
+    &.disabled {
+        background: $color-light-grey;
+        color: $color-grey;
+        pointer-events: none;
+        border-color: $color-light-grey;
+
+        img {
+            opacity: 0.4;
+        }
+    }
+}
+
+.vr-sort {
+    position: relative;
+
+    &__btn {
+        border: 1px solid $color-divider;
+        border-radius: 12px;
+        padding: 0 3px 0 15px;
+        height: 40px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        line-height: 120%;
+        text-align: center;
+        color: $color-dark-grey;
+        background: $color-white;
+        cursor: pointer;
+        user-select: none;
+        @include addTransition();
+
+        @include media($size-md) {
+            padding: 0 5px 0 8px;
+        }
+        
+        @include media($size-sm) {
+            justify-content: space-between;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        &:hover {
+            border-color: $color-grey;
+        }
+
+        b {
+            color: $color-black;
+
+            @include media($size-sm) {
+                font-weight: 500;
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        span {
+            flex-shrink: 0;
+
+            span {
+                @include media($size-sm) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &.active {
+        .vr-select__list {
+            display: block;
+        }
+    }
+}
+
+.vr-select {
+    position: relative;
+
+    &__btn {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        border: 1px solid $color-divider;
+        border-radius: 12px;
+        user-select: none;
+        @include addTransition();
+
+        &:hover {
+            border-color: $color-grey;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            cursor: pointer;
+            background: url('../images/arrow-down.svg') no-repeat;
+            background-color: transparent;
+            background-position: calc(100% - 14px) center;
+        }
+    }
+
+    &__inp {
+        padding: 0 14px;
+        height: 100%;
+        width: 100%;
+        background: $color-white;
+        font-size: 14px;
+        line-height: 140%;
+        color: $color-black;
+
+        &::placeholder {
+            color: $color-dark-grey;
+        }
+
+    }
+
+    &__list {
+        position: absolute;
+        z-index: 3;
+        left: 0;
+        bottom: -8px;
+        transform: translateY(100%);
+        width: 100%;
+        padding: 8px;
+        box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+        background: $color-white;
+        border-radius: 12px;
+        border: 2px solid $color-divider;
+        display: none;
+
+        ul {
+            padding-right: 8px;
+            max-height: 175px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 4px;
+                border-radius: 100px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $color-dark-grey;
+                height: 30px;
+                border-radius: 100px;
+            }
+        }
+
+        li {
+            border-radius: 8px;
+            padding: 9px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            font-size: 14px;
+            line-height: 120%;
+            color: $color-black;
+            @include addTransition();
+
+            &:hover,
+            &.selected {
+                color: $color-white;
+                background-color: $color-grey;
+            }
+
+            &.selected {
+                background: url('../images/times-white.svg') no-repeat;
+                background-color: $color-grey;
+                background-position: calc(100% - 10px) center;
+            }
+        }
+    }
+
+    &.active {
+        .vr-select {
+            &__btn {
+                border-color: $color-grey;
+            }
+
+            &__list {
+                display: block;
+            }
+        }
+    }
+}
+
+.vr-date {
+    position: relative;
+    width: 100%;
+
+    &__btn {
+        border: 1px solid $color-divider;
+        border-radius: 12px;
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        user-select: none;
+        @include addTransition();
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: url('../images/arrow-down.svg') no-repeat;
+            background-color: transparent;
+            background-position: calc(100% - 14px) center;
+        }
+
+        &:hover {
+            border-color: $color-grey;
+        }
+    }
+
+    &__inp {
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+        line-height: 140%;
+        color: $color-dark-grey;
+        padding: 0 14px;
+    }
+
+    &__body {
+        border: 2px solid $color-divider;
+        border-radius: 12px;
+        padding: 8px;
+        width: 100%;
+        box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+        background: $color-white;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        transform: translateY(100%);
+        z-index: 3;
+        display: none;
+    }
+
+    .form_range {
+        &__inp {
+            position: relative;
+            z-index: 1;
+            height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                z-index: -1;
+                top: 6px;
+                left: 0;
+                background: $color-grey;
+                border-radius: 4px;
+            }
+
+            .line {
+                height: 2px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 6px;
+                background: $color-fiolet;
+                opacity: 0.5;
+                z-index: -1;
+            }
+        }
+
+        &__val {
+            display: flex;
+            align-items: stretch;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 10px;
+
+            &_item {
+                width: 100%;
+                position: relative;
+                border: 1px solid $color-divider;
+                border-radius: 12px;
+
+                span {
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: $color-dark-grey;
+                    position: absolute;
+                    left: 14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                .val {
+                    width: 100%;
+                    height: 50px;
+                    padding: 0 12px 0 34px;
+                    font-size: 14px;
+                    line-height: 140%;
+                    color: $color-black;
+                }
+            }
+        }
+
+        svg,
+        input[type='range']:not(.val) {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 100%;
+            height: 2px;
+            color: transparent;
+            background: transparent;
+        }
+
+        input[type='number']::-webkit-outer-spin-button,
+        input[type='number']::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        input[type='range']:focus {
+            outline: none;
+        }
+
+        input[type='range']:focus::-webkit-slider-runnable-track {
+            background: transparent;
+        }
+
+        input[type='range']:focus::-ms-fill-lower {
+            background: transparent;
+        }
+
+        input[type='range']:focus::-ms-fill-upper {
+            background: transparent;
+        }
+
+        input[type='range']::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+            border: 0;
+            height: 14px;
+            width: 14px;
+            border-radius: 25px;
+            background: $color-fiolet;
+            cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            z-index: 2;
+            margin-top: -4.5px;
+            cursor: pointer;
+        }
+
+        input[type='range']::-webkit-slider-thumb,
+        input[type='range']::-webkit-slider-thumb {
+
+            &:active,
+            &:hover {
+                background: $color-fiolet;
+            }
+        }
+
+        input[type='range']::-moz-range-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+        }
+
+        input[type='range']::-moz-range-thumb {
+            z-index: 2;
+            position: relative;
+            height: 14px;
+            width: 14px;
+            border-radius: 25px;
+            appearance: none;
+            border: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            top: 10px;
+            margin-top: -4.5px;
+            background: $color-fiolet;
+            cursor: pointer;
+        }
+
+        input[type='range']::-ms-track {
+            width: 100%;
+            height: 2px;
+            cursor: pointer;
+            animate: 0.2s;
+            background: transparent;
+            border-color: transparent;
+            color: transparent;
+        }
+
+        input[type='range']::-ms-fill-lower,
+        input[type='range']::-ms-fill-upper {
+            background: transparent;
+            border-radius: 1px;
+            box-shadow: none;
+            border: 0;
+        }
+
+        input[type='range']::-ms-thumb {
+            z-index: 2;
+            position: relative;
+            height: 14px;
+            width: 14px;
+            border-radius: 25px;
+            background: transparent;
+            cursor: pointer;
+        }
+    }
+
+    &.active {
+        .vr-date {
+            &__btn {
+                border-color: $color-grey;
+            }
+
+            &__body {
+                display: block;
+            }
+        }
+    }
+}
+
+.vr-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        background: $color-white;
+        border: 1px solid $color-divider;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        a {
+            width: 40px;
+            height: 40px;
+            border: 1px solid $color-divider;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            background: $color-white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            line-height: 120%;
+            text-transform: uppercase;
+            color: $color-black;
+            @include addTransition();
+
+            &:hover, &.active {
+                background: $color-fiolet;
+                color: $color-white;
+            }
+        }
+    }
+}
+
+.vr-count {
+    display: flex;
+    align-items: center;
+    padding: 0 11.5px;
+    border: 1px solid $color-divider;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+    letter-spacing: -0.03em;
+    color: $color-black;
+    background: $color-white;
+
+    @include media($size-md) {
+        font-size: 26px;
+    }
+
+    @include media($size-sm) {
         font-size: 20px;
         border-radius: 12px;
     }
