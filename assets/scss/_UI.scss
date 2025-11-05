@@ -146,6 +146,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 12px;
         padding: 0 15px;
         height: 40px;
         background: $color-grey;
@@ -167,6 +168,45 @@
             background: $color-light-grey;
             color: $color-grey;
             pointer-events: none;
+        }
+    }
+
+    &__red {
+        border-radius: 12px;
+        padding: 0 15px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background: rgba(222, 25, 28, 0.2);
+        font-size: 14px;
+        line-height: 120%;
+        color: $color-red;
+        @include addTransition();
+
+        img {
+            @include addTransition();
+        }
+
+        &:hover {
+            background: $color-red;
+            color: $color-white;
+
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        &.disabled {
+            pointer-events: none;
+            background: $color-light-grey;
+            color: $color-grey;
+
+            img {
+                filter: brightness(0) invert(0);
+                opacity: 0.35;
+            }
         }
     }
 }
@@ -196,7 +236,6 @@
 .vr-breadcrumb {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 15px;
 
@@ -236,6 +275,12 @@
     
     span {
         color: $color-black;
+        font-weight: 600;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     svg {
@@ -806,4 +851,87 @@
         font-size: 20px;
         border-radius: 12px;
     }
+}
+
+.vr-inp {
+    border: 1px solid $color-divider;
+    border-radius: 12px;
+    padding: 0 14px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    line-height: 140%;
+    color: $color-black;
+    @include addTransition();
+
+    &::placeholder {
+        color: $color-dark-grey;
+    }
+
+    &:hover, &:focus {
+        border-color: $color-grey;
+    }
+
+    &:disabled {
+        background: $color-light-grey;
+        border-color: $color-divider;
+    }
+}
+
+.vr-swpBtn {
+    border: 1px solid $color-divider;
+    border-radius: 8px;
+    width: 24px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-white;
+}
+
+.vr-status {
+    padding: 2px 3px 2px 2px;
+    border-radius: 20px 2px 2px 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: $color-white;
+
+    img {
+        flex-shrink: 0;
+    }
+}
+
+.status-success {
+    @extend .vr-status;
+    background: $color-green;
+}
+
+.status-progress {
+    @extend .vr-status;
+    background: $color-blue;
+}
+
+.status-confirmation {
+    @extend .vr-status;
+    background: $color-pink;
+}
+
+.status-start {
+    @extend .vr-status;
+    background: $color-grey;
+}
+
+.status-cancelled {
+    @extend .vr-status;
+    background: $color-red;
+}
+
+.status-rejected {
+    @extend .vr-status;
+    background: $color-red;
 }
