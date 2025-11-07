@@ -172,6 +172,20 @@ $(document).ready(function () {
         })
     });
 
+    const homeSwp = new Swiper('.vr-home__swp .swiper', {
+        slidesPerView: 'auto',
+        spaceBetween: 14,
+        breakpoints: {
+            1100: {
+                spaceBetween: 15,
+            },
+        },
+        navigation: {
+            nextEl: '.vr-home .vr-swpBtn__next',
+            prevEl: '.vr-home .vr-swpBtn__prev',
+        }
+    })
+
     $('.vr-filter__modal-bg').on('click', () => {
         $('.vr-filter__modal').removeClass('active');
     })
@@ -231,5 +245,13 @@ $(document).ready(function () {
             $(el).addClass('active');
             $($('.vr-account__tab-item')[index]).addClass('active').siblings().removeClass('active')
         })
+    })
+
+    $('.vr-chat__friend').on('click', function () {
+        $('.vr-chat__content').addClass('active')
+    })
+    
+    $('.vr-chat__content-head .vr-btn__back').on('click', function () {
+        $('.vr-chat__content').removeClass('active')
     })
 });

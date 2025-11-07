@@ -679,87 +679,109 @@ button, input, textarea, li, div {
     }
 
     &__container {
-        padding: 40px 0 129px;
+        padding: 20px 0 197px;
 
         @include media($size-2xl) {
-            padding: 40px 0 100px;
+            padding: 20px 0 177px;
         }
 
         @include media($size-xl) {
-            padding: 40px 0 59px;
+            padding: 20px 0 136px;
         }
 
         @include media($size-md) {
-            padding: 20px 0 41px;
+            padding: 20px 0 109px;
         }
 
         @include media($size-sm) {
-            padding: 20px 0 31px;
+            padding: 10px 0 87px;
         }
     }
 
-    &__content {
-        border-radius: 32px;
-        padding: 20px 30px 30px;
-        max-width: 925px;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(15px) brightness(1.1);
-        -webkit-backdrop-filter: blur(15px) brightness(1.1);
-        margin: 0 auto;
+    &__swp {
+        margin-bottom: 55px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        overflow: hidden;
+
+        @include media($size-2xl) {
+            margin-bottom: 60px;
+        }
+
+        @include media($size-xl) {
+            margin-bottom: 50px;
+        }
 
         @include media($size-md) {
-            padding: 20px 10px;
+            margin-bottom: 40px;
         }
 
-        h1 {
-            font-weight: 700;
-            font-size: 40px;
-            letter-spacing: -0.03em;
-            text-align: center;
-            color: $color-white;
-            margin-bottom: 25px;
-
-            @include media($size-md) {
-                font-size: 30px;
-            }
-
-            @include media($size-sm) {
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
+        @include media($size-sm) {
+            margin-bottom: 50px;
         }
 
-        ul {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
+        .vr-swpBtn {
+            width: 30px;
+            height: 30px;
+            padding: 0;
+            flex-shrink: 0;
+            display: none;
+            position: relative;
+            z-index: 2;
 
-            @include media($size-sm) {
-                gap: 7px;
-            }
-
-            li {
+            @include media($size-2xl) {
                 display: flex;
             }
+        }
 
-            a {
-                font-size: 14px;
-                color: $color-white;
-                border: 1px solid #7c68df;
-                border-radius: 12px;
-                padding: 9px 13px;
-                box-shadow: 0 3px 7px 0 rgba(20, 20, 43, 0.04);
-                background: rgba(255, 255, 255, 0.1);
+        .swiper {
+            max-width: 1250px;
 
-                @include media($size-md) {
-                    padding: 6px 8px;
-                    font-size: 12px;
-                    border-radius: 8px;
-                }
+            @include media($size-2xl) {
+                max-width: calc(100% - 88px);
+                width: 100%;
+                overflow: visible;
             }
+
+            &-slide {
+                width: auto;
+            }
+        }
+
+        a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 140%;
+            color: $color-white;
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 70px;
+        line-height: 140%;
+        letter-spacing: -0.03em;
+        text-align: center;
+        color: $color-white;
+
+        @include media($size-2xl) {
+            font-size: 60px;
+        }
+
+        @include media($size-xl) {
+            font-size: 50px;
+        }
+
+        @include media($size-md) {
+            line-height: 110%;
+            max-width: 395px;
+            margin: 0 auto;
+        }
+
+        @include media($size-sm) {
+            font-size: 40px;
+            max-width: 315px;
         }
     }
 
@@ -3620,6 +3642,8 @@ button, input, textarea, li, div {
     display: flex;
     align-items: stretch;
     gap: 20px;
+    position: relative;
+    z-index: 1;
     
     &__left {
         width: 305px;
@@ -3631,6 +3655,11 @@ button, input, textarea, li, div {
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @include media($size-xl) {
+            width: 100%;
+            padding: 9px 9px 0;
+        }
     }
 
     &__search {
@@ -3686,6 +3715,29 @@ button, input, textarea, li, div {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            height: 512px;
+            overflow-y: scroll;
+            width: 100%;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            @include media($size-2xl) {
+                height: 507px;
+            }
+
+            @include media($size-xl) {
+                height: 616px;
+            }
+
+            @include media($size-md) {
+                height: 540px;
+            }
+
+            @include media($size-sm) {
+                height: 520px;
+            }
         }
 
         &-logo {
@@ -3733,11 +3785,36 @@ button, input, textarea, li, div {
         background: $color-white;
         width: 100%;
 
+        @include media($size-xl) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        @include media($size-sm) {
+            padding: 14px;
+        }
+
         &-head {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 15px;
+
+            .vr-btn__back {
+                display: none;
+
+                @include media($size-xl) {
+                    flex-shrink: 0;
+                    display: flex;
+                }
+            }
 
             img {
                 flex-shrink: 0;
@@ -3783,6 +3860,7 @@ button, input, textarea, li, div {
         background: $color-light-grey;
         position: relative;
         z-index: 1;
+        overflow: hidden;
 
         &-form {
             position: absolute;
@@ -3824,7 +3902,15 @@ button, input, textarea, li, div {
         flex-direction: column;
         gap: 10px;
         overflow-y: scroll;
-        padding: 20px 20px 70px 0;
+        padding: 20px 2px 70px 0;
+
+        @include media($size-xl) {
+            height: 581px;
+        }
+
+        @include media($size-sm) {
+            height: 479px;
+        }
 
         &::-webkit-scrollbar {
             width: 4px;
@@ -3844,6 +3930,11 @@ button, input, textarea, li, div {
             flex-direction: column;
             gap: 5px;
             align-items: flex-start;
+            padding-right: 10px;
+
+            @include media($size-xl) {
+                max-width: 437px;
+            }
             
             &-text {
                 border-radius: 10px 0 10px 10px;
@@ -3854,6 +3945,17 @@ button, input, textarea, li, div {
                 line-height: 140%;
                 color: $color-black;
                 width: 100%;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: 0;
+                    right: -10px;
+                    background: url('../images/corner-grey.svg') no-repeat;
+                }
             }
 
             &-time {
@@ -3866,13 +3968,43 @@ button, input, textarea, li, div {
             &.other {
                 margin: 0 auto 0 0;
                 align-items: flex-end;
+                padding: 0 0 0 10px;
                 
                 .vr-msg__card {
                     &-text {
                         border-radius: 0 10px 10px 10px;
                         background: $color-white;
+
+                        &::before {
+                            left: -10px;
+                            right: auto;
+                            background-image: url('../images/corner-white.svg');
+                        }
                     }
                 }
+            }
+        }
+
+        &__empty {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color-light-grey;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+
+            p {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 140%;
+                text-align: center;
+                color: $color-dark-grey;
+                
             }
         }
     }

@@ -978,7 +978,7 @@
                     <div class="swiper vr-account__tab">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <button class="vr-account__tab-btn active">Личные данные</button>
+                                <button class="vr-account__tab-btn">Личные данные</button>
                             </div>
                             <div class="swiper-slide">
                                 <button class="vr-account__tab-btn">Центр уведомлений <span class="dot"></span></button>
@@ -987,7 +987,7 @@
                                 <button class="vr-account__tab-btn">Мои аренды</button>
                             </div>
                             <div class="swiper-slide">
-                                <button class="vr-account__tab-btn">Чаты <span class="dot"></span></button>
+                                <button class="vr-account__tab-btn active">Чаты <span class="dot"></span></button>
                             </div>
                             <div class="swiper-slide">
                                 <button class="vr-account__tab-btn">Избранное</button>
@@ -1012,7 +1012,7 @@
                     <div class="vr-account__tab-body">
 
                         <!-- Personal account -->
-                        <div class="vr-account__tab-item active">
+                        <div class="vr-account__tab-item">
                             <div class="account-info">
                                 <div class="account-info__content">
                                     <div class="account-info__data">
@@ -1367,7 +1367,7 @@
                         <!-- My reltal end -->
 
                         <!-- Account chat -->
-                        <div class="vr-account__tab-item">
+                        <div class="vr-account__tab-item active">
                             <div class="vr-chat">
                                 <div class="vr-chat__left">
                                     <div class="vr-chat__search">
@@ -1397,6 +1397,11 @@
                                 </div>
                                 <div class="vr-chat__content">
                                     <div class="vr-chat__content-head">
+                                        <button class="vr-btn__back">
+                                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                            </svg>
+                                        </button>
                                         <img src="./assets/images/friend-logo-2.svg" alt="">
                                         <div>
                                             <span>популярный</span>
@@ -1454,6 +1459,10 @@
                                                 <div class="vr-msg__card-time">11:27</div>
                                             </div>
                                         </div>
+                                        <!-- <div class="vr-msg__empty">
+                                            <img src="./assets/images/msg-grey.svg" alt="">
+                                            <p>Начните чат с <br> арендодателем</p>
+                                        </div> -->
                                         <div class="vr-chat__box-form">
                                             <input type="text" placeholder="Введите сообщение">
                                             <button class="vr-btn__secondary">
