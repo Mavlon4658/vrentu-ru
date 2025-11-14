@@ -209,6 +209,21 @@
             }
         }
     }
+
+    &__sky {
+        background: #0177ff;
+        border-radius: 12px;
+        padding: 0 15px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        color: $color-white;
+    }
 }
 
 .vr-title {
@@ -271,6 +286,10 @@
         @include media($size-md) {
             font-size: 12px;
         }
+    }
+
+    a {
+        white-space: nowrap;
     }
     
     span {
@@ -878,6 +897,12 @@
     }
 }
 
+textarea.vr-inp {
+    height: 110px;
+    resize: none;
+    padding: 14px;
+}
+
 .vr-swpBtn {
     border: 1px solid $color-divider;
     border-radius: 8px;
@@ -934,4 +959,302 @@
 .status-rejected {
     @extend .vr-status;
     background: $color-red;
+}
+
+.vr-accordion {
+    border: 1px solid $color-divider;
+    border-radius: 16px;
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 100%;
+        color: $color-black;
+        padding: 14px;
+        cursor: pointer;
+        user-select: none;
+
+        @include media($size-md) {
+            font-size: 17px;
+        }
+
+        img {
+            flex-shrink: 0;
+            @include addTransition();
+        }
+
+        &.active img {
+            transform: rotateZ(180deg);
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 14px 14px;
+
+        &-wrap {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        p {
+            border: 1px solid $color-divider;
+            border-radius: 8px;
+            padding: 9px 14px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: $color-dark-grey;
+            
+            @include media($size-md) {
+                font-size: 14px;
+                padding: 9px;
+            }
+        }
+    }
+}
+
+.vr-settings {
+    position: relative;
+
+    &__btn {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.9px solid $color-divider;
+        border-radius: 12px;
+        @include addTransition();
+
+        &:hover {
+            background: $color-light-grey;
+            border-color: $color-fiolet;
+        }
+    }
+
+    &__body {
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        transform: translateY(100%);
+        z-index: 5;
+        border: 2px solid $color-divider;
+        border-radius: 12px;
+        padding: 8px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.1);
+        background: $color-white;
+        width: 209px;
+
+        a {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 120%;
+            color: $color-black;
+            width: 100%;
+            display: block;
+            padding: 9px 10px;
+            @include addTransition();
+            border-radius: 8px;
+
+            &:hover {
+                color: $color-fiolet;
+                background: rgba(68, 40, 210, 0.1);
+            }
+
+            &.red-link {
+                color: $color-red;
+
+                &:hover {
+                    background: rgba(222, 25, 28, 0.1);
+                }
+            }
+        }
+    }
+
+    &.active {
+        .vr-settings {
+            &__btn {
+                background: $color-light-grey;
+                border-color: $color-fiolet;
+            }
+
+            &__body {
+                display: flex;
+            }
+        }
+    }
+}
+
+.vr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        display: flex;
+    }
+
+    &__bg {
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    &__dialog {
+        width: 100%;
+        max-height: 100svh;
+        overflow-y: scroll;
+        padding: 40px 0;
+
+        @include media($size-md) {
+            padding: 30px 0 20px;
+        }
+
+        @include media($size-sm) {
+            padding: 10px 0;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    &__content {
+        background: $color-white;
+        position: relative;
+        z-index: 2;
+        border: 1px solid $color-divider;
+        border-radius: 16px;
+        padding: 19px;
+        margin: 0 auto;
+
+        @include media($size-md) {
+            padding: 14px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        z-index: 2;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+
+        @include media($size-md) {
+            top: 14px;
+            right: 14px;
+        }
+    }
+}
+
+.tab-btn {
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $color-light-grey;
+    @include addTransition();
+    border: 1px solid transparent;
+
+    &:hover {
+        border-color: $color-fiolet;
+    }
+
+    &:active {
+        background: $color-fiolet;
+        border-color: $color-fiolet;
+        color :$color-white;
+
+        svg path {
+            fill: $color-white;
+        }
+    }
+}
+
+.vr-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__icon {
+        flex-shrink: 0;
+        position: relative;
+        border-radius: 5px;
+        background: $color-light-grey;
+        border: 1px solid $color-grey;
+        overflow: hidden;
+        cursor: pointer;
+        user-select: none;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            opacity: 0;
+        }
+
+        img {
+            display: none;
+        }
+
+        &:has(input:checked) {
+            background: $color-fiolet;
+            border-color: $color-fiolet;
+
+            img {
+                display: block;
+            }
+        }
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 120%;
+        color: $color-dark-grey;
+
+        a {
+            display: inline;
+            text-decoration: underline;
+            color: $color-pink;
+        }
+    }
+
 }

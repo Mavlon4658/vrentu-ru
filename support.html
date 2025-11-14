@@ -1140,70 +1140,221 @@
     
         <main>
 
-            <!-- Map -->
-            <section class="vr-map">
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A61f28708afc2c7f32ba8c9b52e459e7d5d5e864616ff44068299e987db8ccdba&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe>
-                <div class="vr-container vr-map__container">
-                    <div class="vr-map__head">
-                        <div class="vr-map__head-left">
-                            <div class="vr-title">Инструменты</div>
-                            <div class="vr-count">56</div>
-                        </div>
-                        <div class="vr-map__head-right">
-                            <a href="#" class="vr-btn__md-grey vr-filter__btn">Показать фильтр</a>
-                            <a href="#" class="vr-btn__main">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M2.29004 7.77998V17.51C2.29004 19.41 3.64004 20.19 5.28004 19.25L7.63004 17.91C8.14004 17.62 8.99004 17.59 9.52004 17.86L14.77 20.49C15.3 20.75 16.15 20.73 16.66 20.44L20.99 17.96C21.54 17.64 22 16.86 22 16.22V6.48998C22 4.58998 20.65 3.80998 19.01 4.74998L16.66 6.08998C16.15 6.37998 15.3 6.40998 14.77 6.13998L9.52004 3.51998C8.99004 3.25998 8.14004 3.27998 7.63004 3.56998L3.30004 6.04998C2.74004 6.36998 2.29004 7.14998 2.29004 7.77998Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M8.56006 4V17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    <path d="M15.73 6.61914V19.9991" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
-                                <span>Скрыть карту</span>
+            <!-- Support -->
+            <section class="vr-support">
+                <div class="vr-container vr-support__container">
+                    <ul class="vr-breadcrumb">
+                        <li>
+                            <a href="/" class="vr-btn__main">
+                                <img src="./assets/images/home-icon.svg" alt="">
                             </a>
+                        </li>
+                        <li>
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.21967C0.512563 -0.0732231 0.987436 -0.0732232 1.28033 0.21967L5.28033 4.21967C5.57322 4.51256 5.57322 4.98744 5.28033 5.28033L1.28033 9.28033C0.987437 9.57322 0.512564 9.57322 0.21967 9.28033C-0.073223 8.98744 -0.0732231 8.51256 0.21967 8.21967L3.68934 4.75L0.21967 1.28033C-0.0732237 0.987437 -0.0732237 0.512563 0.21967 0.21967Z" fill="#7E7E7E" />
+                            </svg>
+                        </li>
+                        <span>Техническая поддержка</span>
+                    </ul>
+                    <h2 class="vr-title">Техническая поддержка</h2>
+                    <div class="vr-support__grid">
+                        <div class="vr-support__img">
+                            <img src="./assets/images/contact-card-bg.png" alt="" class="bg-img">
+                            <img src="./assets/images/support-card-img.png" alt="" class="main-img">
+                        </div>
+                        <div class="vr-support__card">
+                            <b>Чем мы можем помочь?</b>
+                            <ul>
+                                <li>Ответы на вопросы по работе платформы "Vrentu".</li>
+                                <li>Помощь в решении технических проблем с сайтом или приложением.</li>
+                                <li>Консультации по процессу аренды, оплаты и доставки.</li>
+                                <li>Содействие в разрешении спорных ситуаций между арендаторами и арендодателями.</li>
+                                <li>Прием предложений по улучшению сервиса.</li>
+                            </ul>
+                        </div>
+                        <div class="vr-support__card">
+                            <div class="text">
+                                <b>Как связаться с поддержкой?</b>
+                                <p>Выберите наиболее удобный для вас способ:</p>
+                            </div>
+                            <div class="links">
+                                <span>Email:</span>
+                                <a href="#">support@vrentu.com</a>
+                            </div>
+                            <div class="links">
+                                <span>Телефон:</span>
+                                <a href="#">+7 (988) 123-456-0</a>
+                                <p>с 9:00 до 18:00 по МСК, пн-пт</p>
+                            </div>
+                            <div class="bottom-text">
+                                <span>Онлайн-чат:</span>
+                                <a href="#" class="vr-tag">
+                                    <span>Перейти</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.96967 7.46967C10.2626 7.17678 10.7374 7.17678 11.0303 7.46967L15.0303 11.4697C15.3232 11.7626 15.3232 12.2374 15.0303 12.5303L11.0303 16.5303C10.7374 16.8232 10.2626 16.8232 9.96967 16.5303C9.67678 16.2374 9.67678 15.7626 9.96967 15.4697L13.4393 12L9.96967 8.53033C9.67678 8.23744 9.67678 7.76256 9.96967 7.46967Z" fill="#A9A9BD" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="vr-map__card-wrap">
-                        <div class="vr-map__card">
-                            <div class="vr-map__card-left">
-                                <button class="vr-map__card-favorite">
-                                    <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.97474C0 2.59913 2.96143 0 6.4375 0C8.22934 0 9.80605 0.840173 10.9375 1.92729C12.0689 0.840173 13.6457 0 15.4375 0C18.9136 0 21.875 2.59913 21.875 5.97474C21.875 8.28708 20.8889 10.3206 19.5227 12.0394C18.1589 13.7553 16.3749 15.2116 14.6668 16.395C14.0144 16.8469 13.3544 17.2639 12.7503 17.5715C12.1831 17.8604 11.5309 18.125 10.9375 18.125C10.3441 18.125 9.69187 17.8604 9.12466 17.5715C8.5206 17.2639 7.86058 16.8469 7.20817 16.395C5.50006 15.2116 3.71609 13.7553 2.35228 12.0394C0.986101 10.3206 0 8.28709 0 5.97474ZM6.4375 1.875C3.83844 1.875 1.875 3.78637 1.875 5.97474C1.875 7.72912 2.61973 9.3625 3.82011 10.8728C5.02285 12.386 6.64115 13.7212 8.27593 14.8537C8.89452 15.2822 9.47718 15.6469 9.97556 15.9007C10.5108 16.1733 10.8208 16.25 10.9375 16.25C11.0542 16.25 11.3642 16.1733 11.8994 15.9007C12.3978 15.6469 12.9805 15.2822 13.5991 14.8537C15.2338 13.7212 16.8521 12.386 18.0549 10.8728C19.2553 9.3625 20 7.72911 20 5.97474C20 3.78637 18.0366 1.875 15.4375 1.875C13.9448 1.875 12.551 2.76678 11.6807 3.89865C11.5032 4.12945 11.2286 4.26471 10.9375 4.26471C10.6464 4.26471 10.3718 4.12945 10.1943 3.89865C9.32401 2.76678 7.93019 1.875 6.4375 1.875Z" fill="#A9A9BD" />
-                                        <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
-                                    </svg>
-                                </button>
-                                <img src="./assets/images/map-card-1.png" alt="" class="main-img">
-                            </div>
-                            <div class="vr-map__card-right">
-                                <h3 class="vr-map__card-title">Дрель-шуруповерт Metabo PowerMaxx BS Basic 12V + набор бит</h3>
-                                <div class="vr-map__card-info">
-                                    <div class="vr-map__card-seller">
-                                        <div class="vr-map__card-avatar"></div>
-                                        <div>
-                                            <div class="vr-map__card-name">Вкладимир К.</div>
-                                            <p class="vr-map__card-tag">популярный</p>
-                                        </div>
-                                    </div>
-                                    <div class="vr-map__card-rating">
-                                        <svg class="vr-map__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
-                                        </svg>
-                                        <div class="vr-map__card-rating__text">4.5 <span>(14)</span></div>
+                </div>
+            </section>
+            <!-- Support end -->
+
+            <!-- FAQ -->
+            <section class="vr-faq">
+                <div class="vr-container vr-faq__container">
+                    <h2 class="vr-title">Часто задаваемые вопросы</h2>
+                    <div class="vr-faq__content">
+                        <h3>Общие вопросы</h3>
+                        <div class="vr-faq__accordions">
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Что такое "Vrentu"?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
                                     </div>
                                 </div>
-                                <div class="vr-map__card-bottom">
-                                    <div>
-                                        <div class="vr-map__card-price">488 ₽</div>
-                                        <div class="vr-map__card-period">в сутки</div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Это бесплатно?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
                                     </div>
-                                    <button class="vr-btn__main vr-map__card-add" aria-label="Добавить">
-                                        <img src="./assets/images/add-icon.svg" alt="">
-                                    </button>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Как обеспечивается безопасность сделок?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-faq__content">
+                        <h3>Для Арендаторов</h3>
+                        <div class="vr-faq__accordions">
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Как арендовать вещь?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Когда я плачу за аренду?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Что делать, если вещь оказалась сломанной или не соответствует описанию?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Как происходит возврат вещи?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vr-faq__content">
+                        <h3>Для Арендодателей</h3>
+                        <div class="vr-faq__accordions">
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Как сдать вещь в аренду?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Когда я получу деньги за аренду?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Что такое комиссия сервиса?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Что делать, если Арендатор повредил мою вещь?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vr-accordion">
+                                <div class="vr-accordion__btn">
+                                    <span>Как управлять доступностью моих вещей?</span>
+                                    <img src="./assets/images/accordion-icon.svg" alt="">
+                                </div>
+                                <div class="vr-accordion__body-wrap">
+                                    <div class="vr-accordion__body">
+                                        <p>Регистрация, просмотр объявлений и размещение объявлений на "Рендатор" бесплатны. Мы взимаем комиссию с Арендодателя за каждую успешную сделку, совершенную через нашу систему Безопасной сделки.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- Map end -->
+            <!-- FAQ end -->
 
         </main>
 

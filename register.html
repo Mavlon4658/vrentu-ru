@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Syle CSS -->
+    <link rel="stylesheet" href="./assets/scss/style.css">
+</head>
+<body>
+    
+    <!-- Auth -->
+    <section class="vr-auth">
+        <img src="./assets/images/bg-img.png" alt="" class="vr-auth__bg">
+        <a href="/" class="vr-auth__logo">
+            <img src="./assets/images/logo-2.svg" alt="">
+        </a>
+        <div class="vr-container">
+            <div class="vr-auth__content">
+                <h2>Регистрация</h2>
+                <div class="vr-auth__form">
+                    <label for="Ваш телефон">Ваш телефон</label>
+                    <div class="form-group">
+                        <input type="tel" placeholder="+7 (____) - ___ - __ - __" class="vr-inp">
+                        <button class="vr-btn__secondary">Отправить код проверки</button>
+                    </div>
+                </div>
+                <div class="vr-auth__form">
+                    <label for="">Код из SMS</label>
+                    <div class="form-group">
+                        <input type="number" placeholder="0" class="vr-inp msg-inp">
+                        <input type="number" placeholder="0" class="vr-inp msg-inp">
+                        <input type="number" placeholder="0" class="vr-inp msg-inp">
+                        <input type="number" placeholder="0" class="vr-inp msg-inp">
+                    </div>
+                </div>
+                <div class="vr-auth__bottom">
+                    <button class="vr-btn__main">Войти</button>
+                    <button class="vr-btn__sky">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="20" height="20" rx="4" fill="white" />
+                            <path d="M5.75909 6H3.5C3.60718 11.1448 6.17958 14.2366 10.6895 14.2366H10.9451V11.2932C12.6023 11.4581 13.8555 12.6701 14.3585 14.2366H16.7C16.0569 11.8951 14.3667 10.6006 13.3114 10.1059C14.3667 9.49581 15.8508 8.01174 16.2053 6H14.0781C13.6164 7.63248 12.2478 9.11655 10.9451 9.25671V6H8.81793V11.7054C7.49875 11.3756 5.83329 9.77614 5.75909 6Z" fill="#0177FF" />
+                        </svg>
+                        <span>Войти с VK ID</span>
+                    </button>
+                    <button class="vr-tag">
+                        <img src="./assets/images/guest-icon.svg" alt="">
+                        <span>Войти через Госуслуги</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Auth end -->
+
+    <!-- jQuery JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- iMask JS -->
+    <script src="./assets/js/iMask.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- JS file -->
+    <script src="./assets/js/main.js"></script>
+
+</body>
+</html>

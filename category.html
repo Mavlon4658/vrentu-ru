@@ -45,7 +45,7 @@
                         </li>
                     </ul>
                     <div class="vr-header__top-right">
-                        <p>Стать арендодателем</p>
+                        <p class="article-modal__open">Стать арендодателем</p>
                         <a href="#">
                             <img src="./assets/images/header-top-right-icon-1.svg" alt="">
                             <span>Вход</span>
@@ -98,6 +98,62 @@
             </div>
         </header>
         <!-- Header end -->
+
+        <!-- Article modal -->
+        <section class="vr-modal article-modal">
+            <div class="vr-modal__bg"></div>
+            <div class="vr-modal__dialog">
+                <div class="vr-container">
+                    <div class="vr-modal__content">
+                        <button class="vr-modal__close">
+                            <img src="./assets/images/modal-close-icon.svg" alt="">
+                        </button>
+                        <div class="article-modal__head">
+                            <h2>Стать арендодателем</h2>
+                            <p>Заполните Ваши данные чтобы отправить заявку на получения статуса арендодателя.</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="inp-group">
+                            <h3>Личные данные</h3>
+                            <input type="text" placeholder="Имя" class="vr-inp" value="Владимир">
+                            <input type="text" placeholder="Фамилия" class="vr-inp" value="Иванов">
+                            <input type="text" placeholder="Шариф" class="vr-inp" value="Петрович">
+                            <input type="tel" placeholder="Контактный телефон" name="" id="" class="vr-inp">
+                            <input type="text" placeholder="ИНН" class="vr-inp">
+                            <div class="vr-select">
+                                <div class="vr-select__btn">
+                                    <input type="text" placeholder="Форма собственности" class="vr-select__inp">
+                                </div>
+                                <div class="vr-select__list">
+                                    <ul>
+                                        <li>select 1</li>
+                                        <li>select 2</li>
+                                        <li>select 3</li>
+                                        <li>select 4</li>
+                                        <li>select 5</li>
+                                        <li>select 6</li>
+                                        <li>select 7</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <textarea placeholder="Описание компании и услуг" name="" id="" class="vr-inp"></textarea>
+                        </div>
+                        <div class="vr-checkbox">
+                            <div class="vr-checkbox__icon">
+                                <img src="./assets/images/check-icon.svg" alt="">
+                                <input type="checkbox" checked>
+                            </div>
+                            <div class="vr-checkbox__text">Пользовательское соглашение/оферта для арендодателей</div>
+                        </div>
+                        <p>Ваша заявку будет рассматриваться столько-то дней. После чего Вам придет уведомление о статусе заявки.</p>
+                        <div class="article-modal__foot">
+                            <button class="vr-btn__main">Отправить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Article modal end -->
 
         <!-- Bottom navs -->
         <section class="vr-navs">
@@ -259,7 +315,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 2</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 2</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -294,7 +357,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 3</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 3</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -329,7 +399,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 4</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 4</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -364,7 +441,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 5</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 5</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -399,7 +483,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 6</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 6</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -434,7 +525,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 7</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 7</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -469,7 +567,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 8</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 8</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -504,7 +609,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструмент 9</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструмент 9</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -539,7 +651,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 10</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 10</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -574,7 +693,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 11</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 11</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -609,7 +735,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 12</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 12</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -644,7 +777,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 13</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 13</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -679,7 +819,14 @@
                             </ul>
                         </div>
                         <div class="category-modal__right-item">
-                            <h3>Инструменты 14</h3>
+                            <div class="category-modal__right-item__head">
+                                <button class="vr-btn__back">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.28033 9.28033C4.98744 9.57322 4.51256 9.57322 4.21967 9.28033L0.21967 5.28033C-0.0732233 4.98744 -0.0732233 4.51256 0.21967 4.21967L4.21967 0.21967C4.51256 -0.0732233 4.98744 -0.0732233 5.28033 0.21967C5.57322 0.512563 5.57322 0.987437 5.28033 1.28033L1.81066 4.75L5.28033 8.21967C5.57322 8.51256 5.57322 8.98744 5.28033 9.28033Z" fill="#313131" />
+                                    </svg>
+                                </button>
+                                <h3>Инструменты 14</h3>
+                            </div>
                             <ul>
                                 <li><a href="#">Лобзики, шлифмашины</a></li>
                                 <li><a href="#">Сварочные аппараты</a></li>
@@ -937,6 +1084,59 @@
                 </div>
             </div>
         </div>
+
+        <!-- Review modal -->
+        <section class="vr-modal review-modal">
+            <div class="vr-modal__bg"></div>
+            <div class="vr-modal__dialog">
+                <div class="vr-container">
+                    <div class="vr-modal__content">
+                        <button class="vr-modal__close">
+                            <img src="./assets/images/modal-close-icon.svg" alt="">
+                        </button>
+                        <h2>Оставить отзыв</h2>
+                        <div class="line"></div>
+                        <div class="review-modal__rating">
+                            <p>Поставьте оценку</p>
+                            <div class="stars">
+                                <input type="number">
+                                <button class="active">
+                                    <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7874 0.591318C17.1408 -0.196057 18.2586 -0.196059 18.612 0.591317L23.0136 10.3984C23.159 10.7224 23.4654 10.9449 23.8184 10.9831L34.5057 12.1387C35.3637 12.2315 35.7092 13.2947 35.0695 13.8741L27.1026 21.0908C26.8394 21.3292 26.7224 21.6893 26.7952 22.0369L28.9987 32.5582C29.1756 33.4029 28.2712 34.06 27.5225 33.6307L18.1971 28.2838C17.889 28.1071 17.5104 28.1071 17.2023 28.2838L7.87689 33.6307C7.12819 34.06 6.22381 33.4029 6.40072 32.5582L8.6042 22.0369C8.677 21.6893 8.55999 21.3292 8.29679 21.0908L0.329888 13.8741C-0.309747 13.2947 0.0356936 12.2315 0.893735 12.1387L11.581 10.9831C11.934 10.9449 12.2404 10.7224 12.3858 10.3984L16.7874 0.591318Z" fill="#E5E7EF" />
+                                    </svg>
+                                </button>
+                                <button class="active">
+                                    <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7874 0.591318C17.1408 -0.196057 18.2586 -0.196059 18.612 0.591317L23.0136 10.3984C23.159 10.7224 23.4654 10.9449 23.8184 10.9831L34.5057 12.1387C35.3637 12.2315 35.7092 13.2947 35.0695 13.8741L27.1026 21.0908C26.8394 21.3292 26.7224 21.6893 26.7952 22.0369L28.9987 32.5582C29.1756 33.4029 28.2712 34.06 27.5225 33.6307L18.1971 28.2838C17.889 28.1071 17.5104 28.1071 17.2023 28.2838L7.87689 33.6307C7.12819 34.06 6.22381 33.4029 6.40072 32.5582L8.6042 22.0369C8.677 21.6893 8.55999 21.3292 8.29679 21.0908L0.329888 13.8741C-0.309747 13.2947 0.0356936 12.2315 0.893735 12.1387L11.581 10.9831C11.934 10.9449 12.2404 10.7224 12.3858 10.3984L16.7874 0.591318Z" fill="#E5E7EF" />
+                                    </svg>
+                                </button>
+                                <button class="active">
+                                    <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7874 0.591318C17.1408 -0.196057 18.2586 -0.196059 18.612 0.591317L23.0136 10.3984C23.159 10.7224 23.4654 10.9449 23.8184 10.9831L34.5057 12.1387C35.3637 12.2315 35.7092 13.2947 35.0695 13.8741L27.1026 21.0908C26.8394 21.3292 26.7224 21.6893 26.7952 22.0369L28.9987 32.5582C29.1756 33.4029 28.2712 34.06 27.5225 33.6307L18.1971 28.2838C17.889 28.1071 17.5104 28.1071 17.2023 28.2838L7.87689 33.6307C7.12819 34.06 6.22381 33.4029 6.40072 32.5582L8.6042 22.0369C8.677 21.6893 8.55999 21.3292 8.29679 21.0908L0.329888 13.8741C-0.309747 13.2947 0.0356936 12.2315 0.893735 12.1387L11.581 10.9831C11.934 10.9449 12.2404 10.7224 12.3858 10.3984L16.7874 0.591318Z" fill="#E5E7EF" />
+                                    </svg>
+                                </button>
+                                <button class="active">
+                                    <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7874 0.591318C17.1408 -0.196057 18.2586 -0.196059 18.612 0.591317L23.0136 10.3984C23.159 10.7224 23.4654 10.9449 23.8184 10.9831L34.5057 12.1387C35.3637 12.2315 35.7092 13.2947 35.0695 13.8741L27.1026 21.0908C26.8394 21.3292 26.7224 21.6893 26.7952 22.0369L28.9987 32.5582C29.1756 33.4029 28.2712 34.06 27.5225 33.6307L18.1971 28.2838C17.889 28.1071 17.5104 28.1071 17.2023 28.2838L7.87689 33.6307C7.12819 34.06 6.22381 33.4029 6.40072 32.5582L8.6042 22.0369C8.677 21.6893 8.55999 21.3292 8.29679 21.0908L0.329888 13.8741C-0.309747 13.2947 0.0356936 12.2315 0.893735 12.1387L11.581 10.9831C11.934 10.9449 12.2404 10.7224 12.3858 10.3984L16.7874 0.591318Z" fill="#E5E7EF" />
+                                    </svg>
+                                </button>
+                                <button>
+                                    <svg width="36" height="34" viewBox="0 0 36 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.7874 0.591318C17.1408 -0.196057 18.2586 -0.196059 18.612 0.591317L23.0136 10.3984C23.159 10.7224 23.4654 10.9449 23.8184 10.9831L34.5057 12.1387C35.3637 12.2315 35.7092 13.2947 35.0695 13.8741L27.1026 21.0908C26.8394 21.3292 26.7224 21.6893 26.7952 22.0369L28.9987 32.5582C29.1756 33.4029 28.2712 34.06 27.5225 33.6307L18.1971 28.2838C17.889 28.1071 17.5104 28.1071 17.2023 28.2838L7.87689 33.6307C7.12819 34.06 6.22381 33.4029 6.40072 32.5582L8.6042 22.0369C8.677 21.6893 8.55999 21.3292 8.29679 21.0908L0.329888 13.8741C-0.309747 13.2947 0.0356936 12.2315 0.893735 12.1387L11.581 10.9831C11.934 10.9449 12.2404 10.7224 12.3858 10.3984L16.7874 0.591318Z" fill="#E5E7EF" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <textarea placeholder="Напишите Ваши впечатления от аренды" name="" id="" class="vr-inp"></textarea>
+                        <div class="review-modal__foot">
+                            <p>Отзыв будет отображаться на странице товара после проверки модератором</p>
+                            <button class="vr-btn__main">Отправить отзыв</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Review modal end -->
     
         <main>
 
@@ -1233,22 +1433,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1270,15 +1472,17 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                             <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
@@ -1286,7 +1490,7 @@
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1308,22 +1512,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1345,7 +1551,9 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
                                 <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
@@ -1353,15 +1561,15 @@
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
-                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
+                                            <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1383,22 +1591,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1420,15 +1630,17 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                             <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
@@ -1436,7 +1648,7 @@
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1458,22 +1670,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1495,7 +1709,9 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
                                 <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
@@ -1503,15 +1719,15 @@
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
-                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
+                                            <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1533,22 +1749,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-1.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1570,15 +1788,17 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-2.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                             <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
@@ -1586,7 +1806,7 @@
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1608,22 +1828,24 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-3.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
-                                <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
+                                <a href="#" class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</a>
                                 <div class="vr-product__card-info">
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
@@ -1645,7 +1867,9 @@
                                         <path d="M6.4375 0C2.96143 0 0 2.59913 0 5.97474C0 8.30344 1.09043 10.264 2.53561 11.888C3.97583 13.5065 5.83393 14.865 7.51372 16.002L10.412 17.9639C10.7294 18.1787 11.1456 18.1787 11.463 17.9639L14.3613 16.0021C16.0411 14.865 17.8992 13.5065 19.3394 11.888C20.7846 10.264 21.875 8.30344 21.875 5.97474C21.875 2.59913 18.9136 0 15.4375 0C13.6457 0 12.0689 0.840173 10.9375 1.92729C9.80605 0.840173 8.22934 0 6.4375 0Z" fill="#FF6B84" />
                                     </svg>
                                 </button>
-                                <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                <a href="#">
+                                    <img src="./assets/images/product-card-4.png" alt="" class="main-img">
+                                </a>
                             </div>
                             <div class="vr-product__card-body">
                                 <h3 class="vr-product__card-title">Моющий пылесос Karcher Puzzi 8/1 C PROF (для мебели, ковров)</h3>
@@ -1653,15 +1877,15 @@
                                     <div class="vr-product__card-seller">
                                         <div class="vr-product__card-avatar"></div>
                                         <div>
-                                            <div class="vr-product__card-name">Вкладимир К.</div>
-                                            <pclass="vr-product__card-tag">популярный</pclass=>
+                                            <a href="#" class="vr-product__card-name">Вкладимир К.</a>
+                                            <p class="vr-product__card-tag">популярный</p>
                                         </div>
                                     </div>
                                     <div class="vr-product__card-rating">
                                         <svg class="vr-product__card-star" width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M8.22787 0.590585C8.58126 -0.196791 9.69913 -0.196791 10.0525 0.590585L11.9572 4.83435C12.1026 5.15834 12.409 5.38091 12.762 5.41908L17.3867 5.91915C18.2447 6.01193 18.5901 7.07509 17.9505 7.65449L14.503 10.7773C14.2398 11.0158 14.1228 11.3759 14.1956 11.7235L15.1491 16.2763C15.326 17.121 14.4216 17.7781 13.6729 17.3488L9.6376 15.0351C9.32952 14.8584 8.95087 14.8584 8.64279 15.0351L4.60745 17.3488C3.85875 17.7781 2.95437 17.121 3.13128 16.2763L4.08478 11.7235C4.15758 11.3759 4.04057 11.0158 3.77737 10.7773L0.329887 7.65449C-0.309748 7.07509 0.0356928 6.01193 0.893735 5.91915L5.51837 5.41908C5.87144 5.38091 6.17778 5.15834 6.32319 4.83435L8.22787 0.590585Z" fill="#F5D623" />
                                         </svg>
-                                        <div class="vr-product__card-rating__text">4.5(14)</div>
+                                        <div class="vr-product__card-rating__text">4.5<span>(14)</span></div>
                                     </div>
                                 </div>
                                 <div class="vr-product__card-bottom">
