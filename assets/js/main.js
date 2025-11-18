@@ -233,9 +233,9 @@ $(document).ready(function () {
         }
     })
 
-    $('.vr-chat__friend').on('click', function () {
-        $('.vr-chat__content').addClass('active')
-    })
+    // $('.vr-chat__friend').on('click', function () {
+    //     $('.vr-chat__content').addClass('active')
+    // })
 
     $('.vr-chat__content-head .vr-btn__back').on('click', function () {
         $('.vr-chat__content').removeClass('active')

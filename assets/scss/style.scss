@@ -6339,6 +6339,10 @@ main {
         display: flex;
         flex-direction: column;
         gap: 15px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        @include addTransition();
         
         &-wrap {
             display: grid;
@@ -6356,19 +6360,32 @@ main {
             font-size: 14px;
             line-height: 120%;
             color: $color-dark-grey;
+            @include addTransition();
         }
 
         b {
             font-weight: 600;
             font-size: 16px;
             line-height: 140%;
+            @include addTransition();
 
             @include media($size-md) {
                 font-size: 20px;
             }
         }
 
-        &:last-child {
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 2;
+            opacity: 0;
+        }
+
+        &:has(input:checked) {
             box-shadow: 0 20px 30px -5px rgba(255, 107, 132, 0.5);
             background: $color-pink;
             

@@ -7255,6 +7255,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.3s ease-in-out all;
 }
 .placing-ad__card-wrap {
   display: grid;
@@ -7272,25 +7276,37 @@ main {
   font-size: 14px;
   line-height: 120%;
   color: #7e7e7e;
+  transition: 0.3s ease-in-out all;
 }
 .placing-ad__card b {
   font-weight: 600;
   font-size: 16px;
   line-height: 140%;
+  transition: 0.3s ease-in-out all;
 }
 @media screen and (max-width: 760px) {
   .placing-ad__card b {
     font-size: 20px;
   }
 }
-.placing-ad__card:last-child {
+.placing-ad__card input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+.placing-ad__card:has(input:checked) {
   box-shadow: 0 20px 30px -5px rgba(255, 107, 132, 0.5);
   background: #ff6b84;
 }
-.placing-ad__card:last-child p {
+.placing-ad__card:has(input:checked) p {
   color: #e5e7ef;
 }
-.placing-ad__card:last-child b {
+.placing-ad__card:has(input:checked) b {
   color: #fff;
 }
 .placing-ad__btn {
